@@ -14,3 +14,23 @@
  *    Attention, trouvez une solution pour que le fichier contienne du JSON valide !
  * 6. Affichez sur la page index les fichiers ayant déjà été uploadés.
  */
+
+?>
+<form action="fichier.php" method="post" enctype="multipart/form-data">
+
+
+    <label for="fichier">Ajoutez une image</label>
+    <input type="file" name="fichierUtilisateur" id="fichier">
+
+    <input type="submit" value="envoyer">
+
+</form>
+
+<?php
+
+if(isset($_GET['e'])) {
+    echo "y'a une erreur quelque part bisous";
+}
+elseif (isset($_GET['s'])) {
+    echo "Transfert réussi";
+}
